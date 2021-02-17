@@ -1,0 +1,55 @@
+.mainTable {
+  width: 100%;
+  margin: 0 auto;
+}
+
+tr {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+td {
+  width: 120px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+th {
+  width: 120px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.edit {
+  background-color: rgb(243, 165, 20);
+  border: 1px solid #000;
+}
+
+.delete {
+  background-color: tomato;
+  border: 1px solid #000;
+}
+
+.editInputs {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+#inpSave {
+  width: 300px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+#butSave {
+  width: 60px;
+  height: 40px;
+  background-color: rgb(63, 205, 50);
+  border: 1px solid #000;
+}

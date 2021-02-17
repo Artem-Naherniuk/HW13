@@ -1,0 +1,23 @@
+<table class="mainTable">
+  <tr>
+    <th><b>#</b></th>
+    <th><b>Task</b></th>
+    <th><b>Check</b></th>
+    <th><b>DONE/IN PROGRESS</b></th>
+    <th><b>Edit</b></th>
+    <th><b>DELETE</b></th>
+  </tr>
+  <tr *ngFor="let all of allTasks; index as i">
+    <td>{{ i+1 }}</td>
+    <td>{{ all }}</td>
+    <td><input type="checkbox" [(ngModel)]="arr[i]" name="arr[i]"></td>
+    <td [innerHTML]="arr[i] == false ? textInProgress : textDone"></td>
+    <td><button class="edit" (click)="edit(i)">Edit</button></td>
+    <td><button class="delete" [disabled]="arr[i] == false ? true : false" (click)="delete(i)">DELETE</button></td>
+  </tr>
+</table>
+
+<div class="editInputs" [style.visibility]="visibble ? 'visible' : 'hidden'">
+  <input id="inpSave" type="text" [(ngModel)]="editTask" name="editTask">
+  <button id="butSave" (click)="save()">save</button>
+</div>
